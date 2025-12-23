@@ -1,0 +1,17 @@
+@use "_variables.scss";
+
+@use "tailwindcss/base";
+@use "tailwindcss/components";
+@use "tailwindcss/utilities";
+
+.carousel-control-prev-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #444;
+}
+
+.carousel-control-next-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #444;
+}

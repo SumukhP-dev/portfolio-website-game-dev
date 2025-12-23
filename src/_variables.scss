@@ -1,0 +1,7 @@
+@use "igniteui-angular/theming" as *;
+
+$primary-color: #00ff15;
+
+igx-grid-toolbar {
+  --background-color: #{$primary-color};
+}

@@ -1,0 +1,57 @@
+<div class="link-primary">
+  <igx-navbar [isActionButtonVisible]="true">
+    <igx-navbar-action class="flex justify-between w-full items-center">
+      <!-- LEFT NAVIGATION LINKS -->
+      <div class="flex items-center space-x-4">
+        <!-- Home -->
+        <button igxButton routerLink="/home">
+          <igx-icon style="width: 24px; height: 24px; font-size: 24px"
+            >home</igx-icon
+          >
+        </button>
+
+        <!-- Game Development -->
+        <button
+          igxButton="outlined"
+          [igxToggleAction]="dropdownGameDev"
+          [igxDropDownItemNavigation]="dropdownGameDev"
+          class="mx-1"
+        >
+          Game Development
+        </button>
+        <igx-drop-down #dropdownGameDev>
+          <igx-drop-down-item routerLink="/aherosjourney">
+            A Hero's Journey RPG
+          </igx-drop-down-item>
+          <igx-drop-down-item routerLink="/averysadventure">
+            Avery's Adventure
+          </igx-drop-down-item>
+          <igx-drop-down-item routerLink="/ballrolling">
+            Unity Ball Rolling Game
+          </igx-drop-down-item>
+        </igx-drop-down>
+
+      </div>
+
+      <!-- RIGHT LINKS (LinkedIn + GitHub) -->
+      <div class="flex items-center space-x-2">
+        <a
+          igxButton
+          target="_blank"
+          href="https://www.linkedin.com/in/sumukh-paspuleti/"
+          class="flex items-center space-x-1"
+        >
+          <igx-icon>work</igx-icon> <span>LinkedIn</span>
+        </a>
+        <a
+          igxButton
+          target="_blank"
+          href="https://github.com/SumukhP-dev"
+          class="flex items-center space-x-1"
+        >
+          <igx-icon>code</igx-icon> <span>GitHub</span>
+        </a>
+      </div>
+    </igx-navbar-action>
+  </igx-navbar>
+</div>

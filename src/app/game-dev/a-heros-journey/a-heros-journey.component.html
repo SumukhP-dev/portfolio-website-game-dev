@@ -1,0 +1,45 @@
+<body class="bg-[#0B0C10] text-[#66FCF1] p-5">
+  <div class="flex items-center justify-center p-3 text-5xl mb-10">
+    <h1>A Hero's Journey RPG</h1>
+  </div>
+  <div class="ml-10 mr-10">
+    <a
+      class="btn btn-primary flex justify-center items-center mb-2"
+      href="/game-files/A_Heros_Journey_RPG.zip"
+      >Download game files</a
+    >
+    <a
+      class="btn btn-primary flex justify-center items-center mb-4"
+      target="_blank"
+      href="https://github.com/SumukhP-dev/A_Heros_Journey_RPG"
+      >Link to Github Repository</a
+    >
+    <div class="">
+      <ngb-carousel
+        #carousel
+        [interval]="1000"
+        [pauseOnHover]="pauseOnHover"
+        [pauseOnFocus]="pauseOnFocus"
+        (slide)="onSlide($event)"
+      >
+        @for (img of images; track img; let i = $index) {
+        <ng-template ngbSlide>
+          <div
+            class="picsum-img-wrapper flex flex-row min-h-screen justify-center items-center"
+          >
+            <img [src]="img" alt="My image {{ i + 1 }} description" />
+          </div>
+        </ng-template>
+        }
+      </ngb-carousel>
+
+      <hr />
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </div>
+</body>
+
