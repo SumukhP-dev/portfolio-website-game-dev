@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
@@ -11,6 +11,7 @@ import {
   IgxToggleModule,
   IgxButtonModule,
 } from 'igniteui-angular';
+import { ProjectsService, Project } from '../../services/projects.service';
 
 @Component({
   selector: 'app-header',
@@ -28,6 +29,16 @@ import {
   ],
   templateUrl: './header.component.html',
 })
-export class HeaderComponent {
-  ngOnInit() {}
+export class HeaderComponent implements OnInit {
+  gameDevProjects: Project[] = [];
+
+  constructor(private projectsService: ProjectsService) {}
+
+  ngOnInit() {
+    this.projectsService.getAllProjects().subscribe((projects) => {
+      this.gameDevProjects = projects.filter(
+        (p) => p.category === 'game-dev'
+      );
+    });
+  }
 }

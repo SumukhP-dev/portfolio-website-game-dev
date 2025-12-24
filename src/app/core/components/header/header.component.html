@@ -20,15 +20,11 @@
           Game Development
         </button>
         <igx-drop-down #dropdownGameDev>
-          <igx-drop-down-item routerLink="/aherosjourney">
-            A Hero's Journey RPG
+          @for (project of gameDevProjects; track project.id) {
+          <igx-drop-down-item [routerLink]="'/' + project.id">
+            {{ project.title }}
           </igx-drop-down-item>
-          <igx-drop-down-item routerLink="/averysadventure">
-            Avery's Adventure
-          </igx-drop-down-item>
-          <igx-drop-down-item routerLink="/ballrolling">
-            Unity Ball Rolling Game
-          </igx-drop-down-item>
+          }
         </igx-drop-down>
 
       </div>
