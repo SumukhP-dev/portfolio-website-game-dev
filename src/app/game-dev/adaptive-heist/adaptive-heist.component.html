@@ -1,0 +1,80 @@
+<div class="bg-[#0B0C10] text-[#C5C6C7] p-5 font-sans">
+  <!-- Title -->
+  <div class="flex items-center justify-center p-3 mb-10">
+    <h1
+      class="text-5xl font-extrabold text-[#66FCF1] drop-shadow-lg tracking-wide"
+    >
+      Adaptive Heist Game
+    </h1>
+  </div>
+
+  <!-- Project Description -->
+  <div class="ml-5 mr-5 sm:ml-10 sm:mr-10 p-5">
+    <div
+      class="bg-[#1F2833] p-6 rounded-lg shadow-md leading-relaxed text-lg border border-[#45A29E] border-opacity-30"
+    >
+      <p class="mx-4">
+        An
+        <span class="text-[#66FCF1] font-bold">AI-driven heist microsimulation game</span>
+        built in
+        <span class="font-semibold text-[#66FCF1]">Unreal Engine 5.7</span>.
+        Players plan heists and manage
+        <span class="font-semibold text-[#66FCF1]">autonomous AI crew members</span>
+        who execute plans with
+        <span class="font-semibold text-[#66FCF1]">dynamic behaviors</span>.
+        Developed a complete
+        <span class="font-semibold text-[#66FCF1]">C++ foundation with 20+ classes</span>
+        including top-down/isometric camera system, advanced AI systems with
+        <span class="font-semibold text-[#66FCF1]">skill-based interactions</span>
+        (Stealth, Hacking, Combat), panic states, and guard AI with patrol,
+        detection, investigation, and communication. Features
+        <span class="font-semibold text-[#66FCF1]">specialized crew types</span>
+        (Hacker, Muscle, Thief) with unique abilities, game management state machine,
+        and an interaction system supporting multiple types. Demonstrates skills in
+        <span class="font-semibold text-[#66FCF1]">C++ game development, AI programming, Behavior Trees, and Blueprint architecture</span>.
+        C++ foundation complete (23 commits, ~3000+ lines). Ready for Blueprint implementation and level design.
+      </p>
+    </div>
+  </div>
+
+  <!-- Links Section -->
+  <div class="ml-5 mr-5 sm:ml-10 sm:mr-10 flex flex-col items-center">
+    <a
+      href="#"
+      class="w-full sm:w-auto bg-[#1F2833] text-[#C5C6C7] font-semibold py-2 px-6 rounded-md shadow-md mb-5 text-center cursor-default"
+    >
+      💻 Repository & demo coming soon
+    </a>
+  </div>
+
+  <!-- Carousel Section -->
+  @if (images.length > 0) {
+  <div class="ml-5 mr-5 sm:ml-10 sm:mr-10 p-5">
+    <ngb-carousel
+      #carousel
+      [interval]="2000"
+      [pauseOnHover]="pauseOnHover"
+      [pauseOnFocus]="pauseOnFocus"
+      (slide)="onSlide($event)"
+      class="mb-6"
+    >
+      @for (img of images; track img; let i = $index) {
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper flex justify-center items-center">
+          <img
+            [src]="img"
+            [alt]="altTexts[i]"
+            class="rounded-lg shadow-lg"
+          />
+        </div>
+      </ng-template>
+      }
+    </ngb-carousel>
+
+    <hr class="border-[#45A29E] opacity-40 mb-6" />
+  </div>
+  }
+
+  <!-- Spacing at bottom -->
+  <div class="h-32"></div>
+</div>
