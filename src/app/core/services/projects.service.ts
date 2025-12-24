@@ -38,6 +38,22 @@ export class ProjectsService {
       category: 'game-dev',
       image: '/logos/unity-logo.png',
     },
+    {
+      id: 'donut3dblenderart',
+      title: 'Donut 3D Blender Art',
+      description:
+        'A 3D model of a plate of donuts created using Blender software. This project showcases modeling, sculpting, and shading skills, demonstrating the process of creating realistic 3D art using Blender and version control with Blendit (Blender + Git).',
+      category: 'game-dev',
+      image: '/logos/blender-logo.png',
+    },
+    {
+      id: 'adaptiveheist',
+      title: 'Adaptive Heist Game',
+      description:
+        'An AI-driven heist microsimulation game built in Unreal Engine 5.7. Players plan heists and manage autonomous AI crew members who execute plans with dynamic behaviors. Features skill-based gameplay, advanced AI systems, and a complete C++ foundation.',
+      category: 'game-dev',
+      image: '/logos/unreal-logo.png',
+    },
   ];
 
   // ✅ returns all projects
