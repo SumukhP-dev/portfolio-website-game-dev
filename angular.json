@@ -40,17 +40,17 @@
               "node_modules/igniteui-angular/styles/igniteui-angular.css"
             ],
             "scripts": ["./node_modules/hammerjs/hammer.min.js"],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            },
             "stylePreprocessorOptions": {
               "includePaths": ["node_modules"]
             }
           },
           "configurations": {
             "production": {
+              "server": "src/main.server.ts",
+              "outputMode": "server",
+              "ssr": {
+                "entry": "src/server.ts"
+              },
               "budgets": [
                 {
                   "type": "initial",
@@ -68,7 +68,18 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "assets": [
+                {
+                  "glob": "**/*",
+                  "input": "public",
+                  "ignore": ["**/game-files/**"]
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
