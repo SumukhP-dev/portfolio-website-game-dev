@@ -1,0 +1,71 @@
+<div class="bg-[#0B0C10] text-[#C5C6C7] p-5 font-sans">
+  <!-- Title -->
+  <div class="flex items-center justify-center p-3 mb-10">
+    <h1
+      class="text-5xl font-extrabold text-[#66FCF1] drop-shadow-lg tracking-wide"
+    >
+      Donut 3D Blender Art
+    </h1>
+  </div>
+
+  <!-- Project Description -->
+  <div class="ml-5 mr-5 sm:ml-10 sm:mr-10 p-5">
+    <div
+      class="bg-[#1F2833] p-6 rounded-lg shadow-md leading-relaxed text-lg border border-[#45A29E] border-opacity-30"
+    >
+      <p class="mx-4">
+        A
+        <span class="text-[#66FCF1] font-bold">3D model of a plate of donuts</span>
+        created using
+        <span class="font-semibold text-[#66FCF1]">Blender software</span>.
+        This project showcases
+        <span class="font-semibold text-[#66FCF1]">modeling, sculpting, and shading skills</span>,
+        demonstrating the process of creating
+        <span class="font-semibold text-[#66FCF1]">realistic 3D art</span>
+        using Blender and
+        <span class="font-semibold text-[#66FCF1]">version control with Blendit</span>
+        (Blender + Git).
+      </p>
+    </div>
+  </div>
+
+  <!-- Links Section -->
+  <div class="ml-5 mr-5 sm:ml-10 sm:mr-10 flex flex-col items-center">
+    <a
+      href="https://github.com/SumukhP-dev/donut-3d-blender-art"
+      target="_blank"
+      class="w-full sm:w-auto bg-[#1F2833] hover:bg-[#66FCF1] text-[#C5C6C7] font-semibold py-2 px-6 rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105 mb-5 text-center"
+    >
+      💻 View on GitHub
+    </a>
+  </div>
+
+  <!-- Carousel Section -->
+  <div class="ml-5 mr-5 sm:ml-10 sm:mr-10 p-5">
+    <ngb-carousel
+      #carousel
+      [interval]="2000"
+      [pauseOnHover]="pauseOnHover"
+      [pauseOnFocus]="pauseOnFocus"
+      (slide)="onSlide($event)"
+      class="mb-6"
+    >
+      @for (img of images; track img; let i = $index) {
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper flex justify-center items-center">
+          <img
+            [src]="img"
+            [alt]="altTexts[i]"
+            class="rounded-lg shadow-lg"
+          />
+        </div>
+      </ng-template>
+      }
+    </ngb-carousel>
+
+    <hr class="border-[#45A29E] opacity-40 mb-6" />
+  </div>
+
+  <!-- Spacing at bottom -->
+  <div class="h-32"></div>
+</div>
